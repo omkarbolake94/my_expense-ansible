@@ -7,11 +7,12 @@
           name: nodejs
           state: installed
           
-     - name: Check node-js Version
-       ansible.builtin.shell: node --version
-       register: node-version
-     - debug: 
-         msg: "NodeJs version {{ node-version.stdout_lines }}"
+     - name: Get Node.js version
+       shell: node --version
+       register: node_version_output
+
+    - debug:
+        msg: "Node.js version is {{ node_version_output.stdout }}"
       
   
       
