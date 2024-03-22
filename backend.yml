@@ -11,7 +11,7 @@
        ansible.builtin.shell: node --version
        register: node-version
      - debug: 
-         msg: "NodeJs version {{ register }}"
+         msg: "NodeJs version {{ node- version }}"
       
   
       
