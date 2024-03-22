@@ -10,3 +10,27 @@
       ansible.builtin.service:
           name: nginx
           state: started
+
+     - name: Remove Nginx File
+       ansible.builtin.file:
+          path: /usr/share/nginx/html
+          state: absent
+
+      - name: Create new directory
+        ansible.builtin.file:
+        path: /usr/share/nginx/html
+        state: directory
+
+      - name: Download file
+          ansible.builtin.get_url:
+            url: https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip 
+            dest: /tmp/frontend.zip
+
+      - name: Extrat Content
+        ansible.builtin.unarchive:
+          src: /tmp/frontend.zip
+          dest: /usr/share/nginx/html
+
+        
+          
+       
