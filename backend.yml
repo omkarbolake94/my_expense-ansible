@@ -5,7 +5,7 @@
      - name: install nodejs
        ansible.builtin.yum:
           name: nodejs
-          state: latest
+          state: installed
 
      - name: Start NodeJS
        ansible.builtin.service:
