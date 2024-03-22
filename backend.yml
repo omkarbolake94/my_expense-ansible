@@ -8,9 +8,17 @@
      - name: Get Node.js version
        shell: node --version
        register: node_version_output
-
      - debug:
         msg: "Node.js version is {{ node_version_output.stdout }}"
-      
+
+     - name: Create Directory
+       ansible.builtin.file:
+          path: /app
+          state: directory
+          
+     - name: Craete Expense Application user
+       ansible.builtin.user: 
+       name: expense
+     
   
       
