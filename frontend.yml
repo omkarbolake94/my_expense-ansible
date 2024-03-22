@@ -29,7 +29,9 @@
     - name: Extrat Content
       ansible.builtin.unarchive:
           src: /tmp/expense-frontend-v2.zip
-          dest: /usr/share/nginx/html
+          dest: /usr/share/nginx/html/
+          remote_src: yes
+          
 
         
           
