@@ -6,8 +6,9 @@
        ansible.builtin.yum:
           name: nodejs
           state: installed
+          
      - name: Check node-js Version
-       shell: node --version
+       ansible.builtin.shell: node --version
       
   
       
