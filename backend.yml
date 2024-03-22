@@ -7,9 +7,5 @@
           name: nodejs
           state: installed
 
-     - name: Start NodeJS
-       ansible.builtin.service:
-           name: nodejs
-           state: started
-       
+  
       
