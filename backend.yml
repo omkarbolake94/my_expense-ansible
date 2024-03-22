@@ -8,7 +8,8 @@
           state: installed
           
      - name: Check node-js Version
-       ansible.builtin.shell: node --version
+       ansible.builtin.debug: 
+         msg: node --version
       
   
       
