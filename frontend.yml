@@ -24,11 +24,11 @@
     - name: Download file
       ansible.builtin.get_url:
             url: https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip 
-            dest: /tmp/frontend.zip
+            dest: /tmp/
 
     - name: Extrat Content
       ansible.builtin.unarchive:
-          src: /tmp/frontend.zip
+          src: /tmp/expense-frontend-v2.zip
           dest: /usr/share/nginx/html
 
         
