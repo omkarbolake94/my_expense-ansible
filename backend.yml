@@ -3,7 +3,7 @@
   become: yes
   tasks:
      - name: install nodejs
-       shell: dnf module install nodejs:20
+       shell: dnf module install nodejs:20 -y
           
      - name: Get Node.js version
        shell: node --version
