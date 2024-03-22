@@ -3,10 +3,9 @@
   become: yes
   tasks:
      - name: install nodejs
-       ansible.builtin.yum:
-          name: nodejs
-          state: installed
+       ansible.builtin.shell: dnf module insytall nodejs:20
           
+         
      - name: Get Node.js version
        shell: node --version
        register: node_version_output
