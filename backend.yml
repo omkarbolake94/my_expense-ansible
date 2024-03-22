@@ -11,7 +11,7 @@
        shell: node --version
        register: node_version_output
 
-    - debug:
+     - debug:
         msg: "Node.js version is {{ node_version_output.stdout }}"
       
   
