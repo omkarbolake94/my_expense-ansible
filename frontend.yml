@@ -1,5 +1,6 @@
 - name: Front End Setup
   hosts: all
+  become: true
   tasks:
     - name: Nginx
       ansible.builtin.yum:
