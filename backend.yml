@@ -49,11 +49,11 @@
           executable: pip3.9
 
      - name: Install MySQL Client
-        ansible.builtin.dnf:
+       ansible.builtin.dnf:
           name: mysql
           state: installed
 
-      - name: Load Schema
+     - name: Load Schema
         community.mysql.mysql_db:
          state: import
          name: all
@@ -62,7 +62,7 @@
          login_password: ExpenseApp@1
          login_host: mysql-dev.rdevops6a.online
 
-      - name: Start Backend Service
+     - name: Start Backend Service
         ansible.builtin.systemd_service:
          name: backend
          state: restarted
