@@ -30,6 +30,12 @@
           src: /tmp/expense-backend-v2.zip
           dest: /app
           remote_src: yes
+
+     - name: download Npdejs dependencies
+       ansible.builtin.shell: npm install
+       args:
+          chdir: /app
+       
        
        
      
